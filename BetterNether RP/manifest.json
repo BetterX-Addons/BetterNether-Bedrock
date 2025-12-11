@@ -1,0 +1,39 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "BetterNether RP",
+		"description": ".",
+		"uuid": "3f0194dd-1462-444b-8670-182902cbf8bb",
+		"version": [
+			1,
+			0,
+			0
+		],
+		"min_engine_version": [
+			1,
+			21,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "49c4ba9e-57ce-464e-a51b-224adfb0b89f",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "07865307-98d2-4437-b6f7-297020c465ac",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}
