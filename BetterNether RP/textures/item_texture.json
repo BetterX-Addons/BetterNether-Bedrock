@@ -1,6 +1,12 @@
 {
     "resource_pack_name": "BetterNether RP",
     "texture_data": {
-        
+        // Bone Reef
+        "bonereef_red_mushroom": {
+            "textures": "textures/items/mushroom/mushroom_red"
+        },
+        "bonereef_brown_mushroom": {
+            "textures": "textures/items/mushroom/mushroom_brown"
+        }
     }
 }

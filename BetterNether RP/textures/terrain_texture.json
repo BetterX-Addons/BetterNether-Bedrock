@@ -3,8 +3,12 @@
     "padding": 8,
     "resource_pack_name": "BetterNether RP",
     "texture_data": {
+        // Bone Reef
         "bonereef_red_mushroom": {
             "textures": "textures/blocks/mushroom/mushroom_red_new"
+        },
+        "bonereef_brown_mushroom": {
+            "textures": "textures/blocks/mushroom/mushroom_brown_new"
         },
         "mushroom_grass_top": {
             "textures": "textures/blocks/bonereef/mushroom_grass_top"

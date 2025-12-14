@@ -1,44 +1,57 @@
 {
-"__comment": "Designed by Paulevs with BDcraft Cubik PRO 0.93 Beta - http://bdcraft.net",
-"textures": {
-    "particle": "blocks/mushroom_brown_new",
-    "texture": "blocks/mushroom_brown_new",
-    "mushroom_block_inside": "block/mushroom_block_inside"
-},
-"elements": [ 
-{
-    "from": [ 7, 0, 7 ],
-    "to": [ 9, 3, 9 ],
-    "faces": {
-		"down":  { "uv": [ 7, 14, 9, 16 ], "texture": "#texture", "cullface": "down" },
-        "north": { "uv": [ 7, 14, 9, 16 ], "texture": "#texture" },
-        "south": { "uv": [ 7, 14, 9, 16 ], "texture": "#texture" },
-        "west":  { "uv": [ 7, 14, 9, 16 ], "texture": "#texture" },
-        "east":  { "uv": [ 7, 14, 9, 16 ], "texture": "#texture" }
-    }
-},
-{
-    "from": [ 5, 3, 5 ],
-    "to": [ 11, 6, 11 ],
-    "faces": {
-        "down":  { "uv": [ 5, 5, 11, 11 ], "texture": "#mushroom_block_inside" },
-        "up":    { "uv": [ 5, 2, 11, 8 ], "texture": "#texture" },
-        "north": { "uv": [ 5, 11, 11, 14 ], "texture": "#texture" },
-        "south": { "uv": [ 5, 11, 11, 14 ], "texture": "#texture" },
-        "west":  { "uv": [ 5, 11, 11, 14 ], "texture": "#texture" },
-        "east":  { "uv": [ 5, 11, 11, 14 ], "texture": "#texture" }
-    }
-},
-{
-    "from": [ 6, 6, 6 ],
-    "to": [ 10, 7, 10 ],
-    "faces": {
-        "up":    { "uv": [ 6, 3, 10, 7 ], "texture": "#texture" },
-        "north": { "uv": [ 6, 10, 10, 11 ], "texture": "#texture" },
-        "south": { "uv": [ 6, 10, 10, 11 ], "texture": "#texture" },
-        "west":  { "uv": [ 6, 10, 10, 11 ], "texture": "#texture" },
-        "east":  { "uv": [ 6, 10, 10, 11 ], "texture": "#texture" }
-    }
-}
-]
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.mushroom_brown_01",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{
+							"origin": [-1, 0, -1],
+							"size": [2, 3, 2],
+							"uv": {
+								"north": {"uv": [7, 14], "uv_size": [2, 2]},
+								"east": {"uv": [7, 14], "uv_size": [2, 2]},
+								"south": {"uv": [7, 14], "uv_size": [2, 2]},
+								"west": {"uv": [7, 14], "uv_size": [2, 2]},
+								"down": {"uv": [9, 16], "uv_size": [-2, -2]}
+							}
+						},
+						{
+							"origin": [-3, 3, -3],
+							"size": [6, 3, 6],
+							"uv": {
+								"north": {"uv": [5, 11], "uv_size": [6, 3]},
+								"east": {"uv": [5, 11], "uv_size": [6, 3]},
+								"south": {"uv": [5, 11], "uv_size": [6, 3]},
+								"west": {"uv": [5, 11], "uv_size": [6, 3]},
+								"up": {"uv": [11, 8], "uv_size": [-6, -6]},
+								"down": {"uv": [11, 11], "uv_size": [-6, -6]}
+							}
+						},
+						{
+							"origin": [-2, 6, -2],
+							"size": [4, 1, 4],
+							"uv": {
+								"north": {"uv": [6, 10], "uv_size": [4, 1]},
+								"east": {"uv": [6, 10], "uv_size": [4, 1]},
+								"south": {"uv": [6, 10], "uv_size": [4, 1]},
+								"west": {"uv": [6, 10], "uv_size": [4, 1]},
+								"up": {"uv": [10, 7], "uv_size": [-4, -4]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
 }

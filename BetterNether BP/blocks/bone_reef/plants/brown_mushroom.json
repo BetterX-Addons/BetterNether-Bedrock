@@ -1,0 +1,254 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:block": {
+        "description": {
+            "traits": {
+                "minecraft:placement_position": {
+                    "enabled_states": [
+                        "minecraft:block_face"
+                    ]
+                }
+            },
+            "states": {
+                "betternether:random": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ]
+            },
+            "identifier": "betternether:brown_mushroom"
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'down'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            -180,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'up'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'north'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            -90,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'west'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            90
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'south'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            90,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('minecraft:block_face') == 'east'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            -90
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:random') == 0",
+                "components": {
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -4,
+                            0,
+                            -4
+                        ],
+                        "size": [
+                            8,
+                            6,
+                            8
+                        ]
+                    },
+                    "minecraft:geometry": "geometry.mushroom_brown_00"
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:random') == 1",
+                "components": {
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -4,
+                            0,
+                            -4
+                        ],
+                        "size": [
+                            8,
+                            8,
+                            8
+                        ]
+                    },
+                    "minecraft:geometry": "geometry.mushroom_brown_01"
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:random') == 2",
+                "components": {
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -2,
+                            0,
+                            -2
+                        ],
+                        "size": [
+                            4,
+                            7,
+                            4
+                        ]
+                    },
+                    "minecraft:geometry": "geometry.mushroom_brown_02"
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:random') == 3",
+                "components": {
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            8,
+                            16
+                        ]
+                    },
+                    "minecraft:geometry": "geometry.mushroom_brown_03"
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:random') == 4",
+                "components": {
+                    "minecraft:collision_box": false,
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -8,
+                            0,
+                            -8
+                        ],
+                        "size": [
+                            16,
+                            10,
+                            16
+                        ]
+                    },
+                    "minecraft:geometry": "geometry.mushroom_brown_04"
+                }
+            }
+        ],
+        "components": {
+            "betternether:brown_mushroom": {},
+            // "minecraft:loot": "loot_tables/blocks/bonereef/brown_mushroom.json",
+            "minecraft:geometry": "geometry.mushroom_brown_00",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "bonereef_brown_mushroom",
+                    "render_method": "opaque",
+                    "face_dimming": true,
+                    "ambient_occlusion": true
+                }
+            },
+            "minecraft:destructible_by_explosion": true,
+            "minecraft:destructible_by_mining": true,
+            "minecraft:flammable": {
+                "catch_chance_modifier": 5,
+                "destroy_chance_modifier": 20
+            },
+            "minecraft:map_color": "#df0000",
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "block_filter": [
+                            "minecraft:grass_block",
+                            "minecraft:dirt",
+                            "minecraft:coarse_dirt",
+                            "minecraft:mud",
+                            "minecraft:muddy_mangrove_roots",
+                            "minecraft:moss_block",
+                            "minecraft:pale_moss_block",
+                            "minecraft:netherrack",
+                            "betternether:mushroom_grass",
+                            "betternether:sepian_mushroom_grass"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:random_offset": {
+                "x": {
+                    "range": {
+                        "min": -1,
+                        "max": 1
+                    },
+                    "steps": 0
+                },
+                "y": {
+                    "range": {
+                        "min": -1,
+                        "max": 1
+                    },
+                    "steps": 0
+                },
+                "z": {
+                    "range": {
+                        "min": -1,
+                        "max": 1
+                    },
+                    "steps": 0
+                }
+            }
+        }
+    }
+}

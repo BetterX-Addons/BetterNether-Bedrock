@@ -1,6 +1,10 @@
 {
     "format_version": "1.21.40",
+    // Bone Reef
     "betternether:red_mushroom": {
+        "sound": "grass"
+    },
+    "betternether:brown_mushroom": {
         "sound": "grass"
     },
     "betternether:mushroom_grass": {
