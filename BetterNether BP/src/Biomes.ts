@@ -1,1 +1,4 @@
-import "./biomes/BoneReef";
+/* Biomes */
+
+// Bone Reef
+import "./biomes/BoneReef/RedMushroom";
