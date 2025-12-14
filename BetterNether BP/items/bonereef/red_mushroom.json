@@ -10,7 +10,7 @@
         "components": {
             "minecraft:icon": "bonereef_red_mushroom",
             "minecraft:block_placer": {
-                "block": "minecraft:red_mushroom",
+                "block": "betternether:red_mushroom",
                 "replace_block_item": true
             }
         }
