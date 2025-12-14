@@ -1,0 +1,20 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "betternether:sepian_mushroom_grass",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "tag:minecraft:is_shovel_item_destructible": {},
+            "tag:grass_block": {},
+            "tag:dirt": {},
+            "minecraft:map_color": "#6C7F26",
+            "minecraft:destructible_by_mining": {
+                "seconds_to_destroy": 1.5
+            }
+        }
+    }
+}
