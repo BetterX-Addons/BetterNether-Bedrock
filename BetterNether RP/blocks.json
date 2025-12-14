@@ -1,0 +1,22 @@
+{
+    "format_version": "1.21.40",
+    "betternether:red_mushroom": {
+        "sound": "grass"
+    },
+    "betternether:mushroom_grass": {
+        "sound": "grass",
+        "textures": {
+            "up": "mushroom_grass_top",
+            "side": "mushroom_grass_side",
+            "down": "netherrack"
+        }
+    },
+    "betternether:sepian_mushroom_grass": {
+        "sound": "grass",
+        "textures": {
+            "up": "sepia_mushroom_grass_top",
+            "side": "sepia_mushroom_grass_side",
+            "down": "netherrack"
+        }
+    }
+}

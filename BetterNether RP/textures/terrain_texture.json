@@ -1,0 +1,22 @@
+{
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "BetterNether RP",
+    "texture_data": {
+        "bonereef_red_mushroom": {
+            "textures": "textures/blocks/mushroom/mushroom_red_new"
+        },
+        "mushroom_grass_top": {
+            "textures": "textures/blocks/bonereef/mushroom_grass_top"
+        },
+        "mushroom_grass_side": {
+            "textures": "textures/blocks/bonereef/mushroom_grass_side"
+        },
+        "sepia_mushroom_grass_top": {
+            "textures": "textures/blocks/bonereef/sepia_mushroom_grass_top"
+        },
+        "sepia_mushroom_grass_side": {
+            "textures": "textures/blocks/bonereef/sepia_mushroom_grass_side"
+        }
+    }
+}
