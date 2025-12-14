@@ -16,6 +16,21 @@
             ]
           }
         ]
+      },
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "betternether:red_mushroom",
+              "name": "betternether:itemGroup.name.mushrooms"
+            },
+            "items": [
+              "betternether:red_mushroom",
+              "betternether:brown_mushroom"
+            ]
+          }
+        ]
       }
     ]
   }
