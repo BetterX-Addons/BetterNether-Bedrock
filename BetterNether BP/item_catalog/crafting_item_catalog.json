@@ -1,0 +1,22 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:crafting_items_catalog": {
+    "categories": [
+      {
+        "category_name": "nature",
+        "groups": [
+          {
+            "group_identifier": {
+              "icon": "betternether:mushroom_grass",
+              "name": "betternether:itemGroup.name.mushroom_grass"
+            },
+            "items": [
+              "betternether:mushroom_grass",
+              "betternether:sepian_mushroom_grass"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
