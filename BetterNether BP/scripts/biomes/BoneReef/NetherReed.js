@@ -9,7 +9,7 @@ system.beforeEvents.startup.subscribe((e) => {
         },
         onRandomTick({ block }) {
             const probability = Math.random();
-            if (probability < 0.4) {
+            if (probability < 0.1) {
                 BlockUtils.growPlantDirection(block, "Up");
             }
         },
@@ -28,7 +28,7 @@ system.beforeEvents.startup.subscribe((e) => {
             const item = equipment.getEquipment(EquipmentSlot.Mainhand);
             if (!item)
                 return;
-            BlockUtils.growPlantDirectionWithBoneMeal(block, Direction.Up, item);
+            BlockUtils.growPlantDirectionWithBoneMeal(block, Direction.Up, item, equipment);
         },
     });
 });

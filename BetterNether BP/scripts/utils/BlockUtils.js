@@ -1,21 +1,18 @@
 import { Direction, world } from "@minecraft/server";
 import { Vec3 } from "./vec/index";
+import { ItemUtils } from "./ItemUtils";
 export class BlockUtils {
     static randomState(block, state, maxStates) {
         const random = Math.floor(Math.random() * maxStates);
         const perm = block.permutation.withState(state, random);
         block.setPermutation(perm);
     }
-    static growSeedPlant(block, item, maxSize, spawnStructure = false, structureName) {
+    static growSeedPlant(block, maxSize, spawnStructure = false, structureName) {
         const growth = block.permutation.getState("betternether:growth");
-        if (item.typeId !== "minecraft:bone_meal")
-            return;
-        if (!growth)
-            return;
         if (growth >= maxSize)
             return;
         const perm = block.permutation.withState("betternether:growth", growth + 1);
-        block.dimension.playSound("minecraft:crop_growth_emitter", block.location);
+        BlockUtils.spawnParticles(block, "minecraft:crop_growth_emitter");
         block.setPermutation(perm);
         if (spawnStructure && structureName) {
             world.structureManager.place(structureName, block.dimension, block.location);
@@ -43,9 +40,10 @@ export class BlockUtils {
             }
         }
     }
-    static growPlantDirectionWithBoneMeal(block, direction, item) {
+    static growPlantDirectionWithBoneMeal(block, direction, item, equipment) {
         if (item.typeId !== "minecraft:bone_meal")
             return;
+        ItemUtils.itemAmountModifier(equipment, item, item.amount - 1);
         BlockUtils.growPlantDirection(block, direction);
     }
     static getFluids(block, fluidType) {

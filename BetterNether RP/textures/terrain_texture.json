@@ -4,6 +4,18 @@
     "resource_pack_name": "BetterNether RP",
     "texture_data": {
         // Bone Reef
+        "feather_fern_base": {
+            "textures": "textures/blocks/bonereef/plants/feather_fern_base"
+        },
+        "feather_fern_leaf": {
+            "textures": "textures/blocks/bonereef/plants/feather_fern_leaf"
+        },
+        "feather_fern_center": {
+            "textures": "textures/blocks/bonereef/plants/feather_fern_center"
+        },
+        "feather_fern_seed": {
+            "textures": "textures/blocks/bonereef/plants/feather_fern_seed"
+        },
         "sepian_bone_grass1": {
             "textures": "textures/blocks/bonereef/plants/sepia_bone_grass_1"
         },

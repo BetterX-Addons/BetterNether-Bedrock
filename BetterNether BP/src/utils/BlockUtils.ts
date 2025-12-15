@@ -1,5 +1,6 @@
-import { Block, Direction, ItemStack, Vector3, world } from "@minecraft/server";
+import { Block, Direction, EntityEquippableComponent, ItemStack, Vector3, world } from "@minecraft/server";
 import { Vec3 } from "./vec/index";
+import { ItemUtils } from "./ItemUtils";
 
 export class BlockUtils {
     static randomState(block: Block, state: string, maxStates: number) {
@@ -8,13 +9,11 @@ export class BlockUtils {
         block.setPermutation(perm);
     }
 
-    static growSeedPlant(block: Block, item: ItemStack, maxSize: number, spawnStructure: boolean = false, structureName?: string) {
+    static growSeedPlant(block: Block, maxSize: number, spawnStructure: boolean = false, structureName?: string) {
         const growth = block.permutation.getState("betternether:growth") as number;
-        if (item.typeId !== "minecraft:bone_meal") return;
-        if (!growth) return;
         if (growth >= maxSize) return;
         const perm = block.permutation.withState("betternether:growth", growth + 1);
-        block.dimension.playSound("minecraft:crop_growth_emitter", block.location);
+        BlockUtils.spawnParticles(block, "minecraft:crop_growth_emitter");
         block.setPermutation(perm);
         if (spawnStructure && structureName) {
             world.structureManager.place(structureName, block.dimension, block.location);
@@ -44,8 +43,9 @@ export class BlockUtils {
         }
     }
 
-    static growPlantDirectionWithBoneMeal(block: Block, direction: "Up" | "Down" | Direction, item: ItemStack) {
+    static growPlantDirectionWithBoneMeal(block: Block, direction: "Up" | "Down" | Direction, item: ItemStack, equipment: EntityEquippableComponent) {
         if (item.typeId !== "minecraft:bone_meal") return;
+        ItemUtils.itemAmountModifier(equipment, item, item.amount - 1);
         BlockUtils.growPlantDirection(block, direction);
     }
 

@@ -1,0 +1,97 @@
+{
+	"format_version": "1.21.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.feather_fern",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{
+							"origin": [-16.5, 0, -7.78843],
+							"size": [16, 0.001, 16],
+							"pivot": [-0.5, 0, -8],
+							"rotation": [0, 0, 45],
+							"uv": {
+								"up": {"uv": [16, 16], "uv_size": [-16, -16], "uv_rotation": 90, "material_instance": "feather_fern_leaf"},
+								"down": {"uv": [0, 16], "uv_size": [16, -16], "uv_rotation": 90, "material_instance": "feather_fern_leaf"}
+							}
+						},
+						{
+							"origin": [0.5, -0.001, -7.78843],
+							"size": [16, 0.001, 16],
+							"pivot": [0.5, 0, -8],
+							"rotation": [0, 0, -45],
+							"uv": {
+								"up": {"uv": [0, 16], "uv_size": [16, -16], "uv_rotation": 270, "material_instance": "feather_fern_leaf"},
+								"down": {"uv": [16, 16], "uv_size": [-16, -16], "uv_rotation": 270, "material_instance": "feather_fern_leaf"}
+							}
+						},
+						{
+							"origin": [-8, -1, -1],
+							"size": [16, 0.001, 16],
+							"pivot": [8, -1, -1],
+							"rotation": [45, 0, 0],
+							"uv": {
+								"up": {"uv": [16, 16], "uv_size": [-16, -16], "uv_rotation": 180, "material_instance": "feather_fern_leaf"},
+								"down": {"uv": [0, 16], "uv_size": [16, -16], "material_instance": "feather_fern_leaf"}
+							}
+						},
+						{
+							"origin": [-8, 0.78514, -13.21386],
+							"size": [16, 0.001, 16],
+							"pivot": [8, -1, 1],
+							"rotation": [-45, 0, 0],
+							"uv": {
+								"up": {"uv": [0, 16], "uv_size": [16, -16], "material_instance": "feather_fern_leaf"},
+								"down": {"uv": [16, 16], "uv_size": [-16, -16], "uv_rotation": 180, "material_instance": "feather_fern_leaf"}
+							}
+						},
+						{
+							"origin": [5.499, 0, -5.5],
+							"size": [0.001, 16, 16],
+							"pivot": [5.5, 0, -5.5],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"east": {"uv": [15.5, 0], "uv_size": [-15.5, 16], "material_instance": "feather_fern_center"},
+								"west": {"uv": [0.5, 0], "uv_size": [15.5, 16], "material_instance": "feather_fern_center"}
+							}
+						},
+						{
+							"origin": [-5.501, 0, -5.5],
+							"size": [0.001, 16, 16],
+							"pivot": [-5.5, 0, -5.5],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"east": {"uv": [15.5, 0], "uv_size": [-15.5, 16], "material_instance": "feather_fern_center"},
+								"west": {"uv": [0.5, 0], "uv_size": [15.5, 16], "material_instance": "feather_fern_center"}
+							}
+						},
+						{
+							"origin": [-10, 0.1, -10],
+							"size": [20, 0, 20],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"north": {"uv": [0, 2], "uv_size": [16, 0]},
+								"east": {"uv": [0, 2], "uv_size": [16, 0]},
+								"south": {"uv": [0, 2], "uv_size": [16, 0]},
+								"west": {"uv": [0, 2], "uv_size": [16, 0]},
+								"up": {"uv": [2, 13.5], "uv_size": [11.5, -11.5], "material_instance": "feather_fern_base"},
+								"down": {"uv": [13.5, 13.5], "uv_size": [-11.5, -11.5], "material_instance": "feather_fern_base"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
