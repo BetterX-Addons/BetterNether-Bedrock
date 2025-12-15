@@ -4,6 +4,15 @@
     "resource_pack_name": "BetterNether RP",
     "texture_data": {
         // Bone Reef
+        "nether_reed_potted": {
+            "textures": "textures/blocks/bonereef/plants/potted/reeds_potted"
+        },
+        "nether_reed_top": {
+            "textures": "textures/blocks/bonereef/plants/reeds_top"
+        },
+        "nether_reed": {
+            "textures": "textures/blocks/bonereef/plants/reeds_middle"
+        },
         "bonereef_red_mushroom": {
             "textures": "textures/blocks/mushroom/mushroom_red_new"
         },

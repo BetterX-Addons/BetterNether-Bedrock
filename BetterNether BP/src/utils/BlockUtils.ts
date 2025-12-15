@@ -1,4 +1,5 @@
-import { Block, ItemStack, world } from "@minecraft/server";
+import { Block, Direction, ItemStack, Vector3, world } from "@minecraft/server";
+import { Vec3 } from "./vec/index";
 
 export class BlockUtils {
     static randomState(block: Block, state: string, maxStates: number) {
@@ -20,7 +21,68 @@ export class BlockUtils {
         }
     }
 
+    static growPlantDirection(block: Block, direction: "Up" | "Down" | Direction) {
+        if (direction === Direction.Up) {
+            let topBlock = block.dimension.getBlock(Vec3.add(block.location, { x: 0, y: 1, z: 0 }));
+            while (topBlock.typeId !== "minecraft:air") {
+                topBlock = block.dimension.getBlock(Vec3.add(topBlock.location, { x: 0, y: 1, z: 0 }));
+            }
+            if (topBlock.typeId === "minecraft:air") {
+                topBlock.dimension.setBlockType(topBlock.location, block.typeId);
+                BlockUtils.spawnParticles(topBlock, "minecraft:crop_growth_emitter");
+            }
+        }
+        else {
+            let bottomBlock = block.dimension.getBlock(Vec3.add(block.location, { x: 0, y: -1, z: 0 }));
+            while (bottomBlock.typeId !== "minecraft:air") {
+                bottomBlock = block.dimension.getBlock(Vec3.add(bottomBlock.location, { x: 0, y: -1, z: 0 }));
+            }
+            if (bottomBlock.typeId === "minecraft:air") {
+                bottomBlock.dimension.setBlockType(bottomBlock.location, block.typeId);
+                BlockUtils.spawnParticles(bottomBlock, "minecraft:crop_growth_emitter");
+            }
+        }
+    }
+
+    static growPlantDirectionWithBoneMeal(block: Block, direction: "Up" | "Down" | Direction, item: ItemStack) {
+        if (item.typeId !== "minecraft:bone_meal") return;
+        BlockUtils.growPlantDirection(block, direction);
+    }
+
+    static getFluids(block: Block, fluidType: string) {
+        const downBlock = block.dimension.getBlockBelow(block.location);
+        const sides = [
+            { x: 1, y: 0, z: 0 },
+            { x: -1, y: 0, z: 0 },
+            { x: 0, y: 0, z: 1 },
+            { x: 0, y: 0, z: -1 },
+        ]
+        for (const side of sides) {
+            const sideLocation = Vec3.add(downBlock.location, side);
+            const sideBlock = downBlock.dimension.getBlock(sideLocation);
+            if (sideBlock.typeId === fluidType) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // similar a la caña de azucar de minecraft
+    static destroyWithoutFluidsNearby(block: Block, grassBlocks: string[]) {
+        const downBlock = block.dimension.getBlock(Vec3.add(block.location, { x: 0, y: -1, z: 0 }));
+        if (grassBlocks.includes(downBlock.typeId) || block.typeId !== downBlock.typeId) {
+            const hasFluids = BlockUtils.getFluids(downBlock, "minecraft:lava");
+            if (!hasFluids) BlockUtils.destroyBlock(block);
+        }
+    }
+
+    static destroyBlock(block: Block) {
+        const { x, y, z } = block.location;
+        block.dimension.runCommand(`setblock ${x} ${y} ${z} air destroy`);
+    }
+
     static spawnParticles(block: Block, particle: string) {
-        block.dimension.spawnParticle(particle, block.location);
+        const fixedLocation = Vec3.add(block.location, { x: 0.5, y: 0.5, z: 0.5 });
+        block.dimension.spawnParticle(particle, fixedLocation);
     }
 }

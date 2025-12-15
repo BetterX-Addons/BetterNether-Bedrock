@@ -1,0 +1,18 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "betternether:nether_reed",
+            "menu_category": {
+                "category": "nature"
+            }
+        },
+        "components": {
+            "minecraft:icon": "nether_reed",
+            "minecraft:block_placer": {
+                "block": "betternether:nether_reed",
+                "replace_block_item": true
+            }
+        }
+    }
+}

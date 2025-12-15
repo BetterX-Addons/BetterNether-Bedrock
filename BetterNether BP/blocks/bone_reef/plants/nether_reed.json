@@ -1,0 +1,89 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "betternether:nether_reed",
+            "menu_category": {
+                "category": "nature"
+            },
+            "states": {
+                "betternether:top": [
+                    false,
+                    true
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('betternether:top') == true",
+                "components": {
+                    "minecraft:geometry": "geometry.random_model1",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "nether_reed_top",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:top') == false",
+                "components": {
+                    "minecraft:geometry": "geometry.random_model1",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "nether_reed",
+                            "render_method": "alpha_test",
+                            "face_dimming": false,
+                            "ambient_occlusion": false
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "betternether:nether_reed": {},
+            "minecraft:tick": {
+                "looping": true,
+                "interval_range": [
+                    10, 20
+                ]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ],
+                        "block_filter": [
+                            "betternether:nether_reed",
+                            "betternether:mushroom_grass",
+                            "betternether:sepian_mushroom_grass"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:destructible_by_mining": true,
+            "minecraft:destructible_by_explosion": true,
+            "minecraft:flammable": {
+                "catch_chance_modifier": 5,
+                "destroy_chance_modifier": 20
+            },
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    16,
+                    10
+                ]
+            }
+        }
+    }
+}
