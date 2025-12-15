@@ -20,7 +20,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "feather_fern_seed",
-                            "render_method": "blend",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }
@@ -34,7 +34,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "feather_fern_seed",
-                            "render_method": "blend",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }
@@ -48,7 +48,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "feather_fern_seed",
-                            "render_method": "blend",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }
@@ -62,25 +62,25 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "feather_fern_seed",
-                            "render_method": "blend",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         },
                         "feather_fern_center": {
                             "texture": "feather_fern_center",
-                            "render_method": "blend",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         },
                         "feather_fern_leaf": {
                             "texture": "feather_fern_leaf",
-                            "render_method": "blend",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         },
                         "feather_fern_base": {
                             "texture": "feather_fern_base",
-                            "render_method": "blend",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }

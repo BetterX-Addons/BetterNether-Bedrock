@@ -21,7 +21,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "nether_reed_top",
-                            "render_method": "alpha_test",
+                            "render_method": "alpha_test_single_sided",
                             "face_dimming": false,
                             "ambient_occlusion": false
                         }
@@ -35,7 +35,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "nether_reed",
-                            "render_method": "alpha_test",
+                            "render_method": "alpha_test_single_sided",
                             "face_dimming": false,
                             "ambient_occlusion": false
                         }

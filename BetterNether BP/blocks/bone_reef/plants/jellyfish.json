@@ -1,0 +1,488 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "betternether:jellyfish",
+            "states": {
+                "betternether:growth": [
+                    0,
+                    1,
+                    2,
+                    3, // small jelly normal variant
+                    4, // small jelly poor variant,
+                    5, // small jelly sepia variant
+                    6, // big jelly roots normal variant
+                    7, // big jelly top normal variant
+                    8, // big jelly roots poor variant
+                    9, // big jelly top poor variant
+                    10, // big jelly roots sepia variant
+                    11 // big jelly top sepia variant
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('betternether:growth') == 0",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_sapling",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_sapling",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 1",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_sapling",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_sapling",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 2",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_sapling",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_sapling",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 3",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_small",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_side": {
+                            "texture": "jellyfish_mushroom_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_top": {
+                            "texture": "jellyfish_mushroom_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_nether_mushroom_stem": {
+                            "texture": "jellyfish_nether_mushroom_stem",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_bottom": {
+                            "texture": "jellyfish_mushroom_bottom",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            10,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 4",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_small",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_side_poor",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_side": {
+                            "texture": "jellyfish_mushroom_side_poor",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_top": {
+                            "texture": "jellyfish_mushroom_top_poor",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_nether_mushroom_stem": {
+                            "texture": "jellyfish_nether_mushroom_stem",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_bottom": {
+                            "texture": "jellyfish_mushroom_bottom_poor",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            10,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 5",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_small",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_side_sepia",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_side": {
+                            "texture": "jellyfish_mushroom_side_sepia",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_top": {
+                            "texture": "jellyfish_mushroom_top_sepia",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_nether_mushroom_stem": {
+                            "texture": "jellyfish_nether_mushroom_stem",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_bottom": {
+                            "texture": "jellyfish_mushroom_bottom_sepia",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            10,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 6",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_bottom",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_bottom",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            10,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 7",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_top",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_nether_mushroom_stem": {
+                            "texture": "jellyfish_nether_mushroom_stem",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_side": {
+                            "texture": "jellyfish_mushroom_side",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_top": {
+                            "texture": "jellyfish_mushroom_top",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            10,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 8",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_bottom",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_bottom_poor",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            10,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 9",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_top",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_side_poor",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_nether_mushroom_stem": {
+                            "texture": "jellyfish_nether_mushroom_stem",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_side": {
+                            "texture": "jellyfish_mushroom_side_poor",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_top": {
+                            "texture": "jellyfish_mushroom_top_poor",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            10,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 10",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_bottom",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_bottom_sepia",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            10,
+                            10
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:growth') == 11",
+                "components": {
+                    "minecraft:geometry": "geometry.jellyfish_mushroom_top",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "jellyfish_mushroom_side_sepia",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_nether_mushroom_stem": {
+                            "texture": "jellyfish_nether_mushroom_stem",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_side": {
+                            "texture": "jellyfish_mushroom_side_sepia",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        },
+                        "jellyfish_mushroom_top": {
+                            "texture": "jellyfish_mushroom_top_sepia",
+                            "render_method": "blend",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    },
+                    "minecraft:selection_box": {
+                        "origin": [
+                            -5,
+                            0,
+                            -5
+                        ],
+                        "size": [
+                            10,
+                            10,
+                            10
+                        ]
+                    }
+                }
+            }
+        ],
+        "components": {
+            "betternether:jellyfish": {},
+            "minecraft:tick": {
+                "looping": true,
+                "interval_range": [ 10, 10 ]
+            },
+            "minecraft:destructible_by_mining": true,
+            "minecraft:destructible_by_explosion": true,
+            "minecraft:map_color": "#485ACB",
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -2,
+                    0,
+                    -2
+                ],
+                "size": [
+                    4,
+                    6,
+                    4
+                ]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ],
+                        "block_filter": [
+                            "betternether:mushroom_grass",
+                            "betternether:sepian_mushroom_grass",
+                            "betternether:jellyfish"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:random_offset": {
+                "x": {
+                    "range": {
+                        "min": -1,
+                        "max": 1
+                    },
+                    "steps": 0
+                },
+                "y": {
+                    "range": {
+                        "min": -1,
+                        "max": 1
+                    },
+                    "steps": 0
+                },
+                "z": {
+                    "range": {
+                        "min": -1,
+                        "max": 1
+                    },
+                    "steps": 0
+                }
+            }
+        }
+    }
+}

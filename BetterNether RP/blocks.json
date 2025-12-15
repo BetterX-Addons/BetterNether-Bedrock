@@ -1,6 +1,9 @@
 {
     "format_version": "1.21.40",
     // Bone Reef
+    "betternether:jellyfish": {
+        "sound": "slime"
+    },
     "betternether:feather_fern": {
         "sound": "grass"
     },

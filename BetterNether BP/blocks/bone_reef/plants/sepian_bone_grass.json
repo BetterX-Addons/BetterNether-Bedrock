@@ -22,7 +22,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "sepian_bone_grass1",
-                            "render_method": "alpha_test",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }
@@ -36,7 +36,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "sepian_bone_grass2",
-                            "render_method": "alpha_test",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }
@@ -50,7 +50,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "sepian_bone_grass3",
-                            "render_method": "alpha_test",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }
@@ -64,7 +64,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "sepian_bone_grass1",
-                            "render_method": "alpha_test",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }
@@ -78,7 +78,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "sepian_bone_grass2",
-                            "render_method": "alpha_test",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }
@@ -92,7 +92,7 @@
                     "minecraft:material_instances": {
                         "*": {
                             "texture": "sepian_bone_grass3",
-                            "render_method": "alpha_test",
+                            "render_method": "alpha_test_single_sided",
                             "ambient_occlusion": false,
                             "face_dimming": false
                         }
