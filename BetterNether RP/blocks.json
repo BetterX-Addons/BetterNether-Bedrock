@@ -1,6 +1,12 @@
 {
     "format_version": "1.21.40",
     // Bone Reef
+    "betternether:sepian_bone_grass": {
+        "sound": "grass"
+    },
+    "betternether:bone_grass": {
+        "sound": "grass"
+    },
     "betternether:nether_reed": {
         "sound": "roots"
     },

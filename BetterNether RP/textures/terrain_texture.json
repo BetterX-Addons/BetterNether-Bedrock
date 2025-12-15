@@ -4,6 +4,24 @@
     "resource_pack_name": "BetterNether RP",
     "texture_data": {
         // Bone Reef
+        "sepian_bone_grass1": {
+            "textures": "textures/blocks/bonereef/plants/sepia_bone_grass_1"
+        },
+        "sepian_bone_grass2": {
+            "textures": "textures/blocks/bonereef/plants/sepia_bone_grass_2"
+        },
+        "sepian_bone_grass3": {
+            "textures": "textures/blocks/bonereef/plants/sepia_bone_grass_3"
+        },
+        "bone_grass1": {
+            "textures": "textures/blocks/bonereef/plants/bone_grass_1"
+        },
+        "bone_grass2": {
+            "textures": "textures/blocks/bonereef/plants/bone_grass_2"
+        },
+        "bone_grass3": {
+            "textures": "textures/blocks/bonereef/plants/bone_grass_3"
+        },
         "nether_reed_potted": {
             "textures": "textures/blocks/bonereef/plants/potted/reeds_potted"
         },

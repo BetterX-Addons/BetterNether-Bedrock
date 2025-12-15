@@ -2,6 +2,12 @@
     "resource_pack_name": "BetterNether RP",
     "texture_data": {
         // Bone Reef
+        "sepian_bone_grass": {
+            "textures": "textures/blocks/bonereef/plants/sepia_bone_grass_1"
+        },
+        "bone_grass": {
+            "textures": "textures/blocks/bonereef/plants/bone_grass_1"
+        },
         "nether_reed": {
             "textures": "textures/items/bonereef/nether_reed_stem"
         },

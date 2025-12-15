@@ -1,0 +1,19 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "betternether:sepian_bone_grass",
+            "menu_category": {
+                "category": "nature",
+                "group": "minecraft:itemGroup.name.grass"
+            }
+        },
+        "components": {
+            "minecraft:icon": "sepian_bone_grass",
+            "minecraft:block_placer": {
+                "block": "betternether:sepian_bone_grass",
+                "replace_block_item": true
+            }
+        }
+    }
+}
