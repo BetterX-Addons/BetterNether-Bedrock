@@ -1,0 +1,159 @@
+{
+    "format_version": "1.21.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "betternether:bone_grass",
+            "states": {
+                "betternether:variants": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('betternether:variants') == 0",
+                "components": {
+                    "minecraft:geometry": "geometry.random_model1",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "bone_grass1",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:variants') == 1",
+                "components": {
+                    "minecraft:geometry": "geometry.random_model1",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "bone_grass2",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:variants') == 2",
+                "components": {
+                    "minecraft:geometry": "geometry.random_model1",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "bone_grass3",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:variants') == 3",
+                "components": {
+                    "minecraft:geometry": "geometry.random_model2",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "bone_grass1",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:variants') == 4",
+                "components": {
+                    "minecraft:geometry": "geometry.random_model2",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "bone_grass2",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('betternether:variants') == 5",
+                "components": {
+                    "minecraft:geometry": "geometry.random_model2",
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "bone_grass3",
+                            "render_method": "alpha_test",
+                            "ambient_occlusion": false,
+                            "face_dimming": false
+                        }
+                    }
+                }
+            }
+        ],
+        "components": {
+            "betternether:bone_grass": {},
+            "minecraft:destructible_by_mining": true,
+            "minecraft:destructible_by_explosion": true,
+            "minecraft:map_color": "#B6F09A",
+            "minecraft:collision_box": false,
+            "minecraft:selection_box": {
+                "origin": [
+                    -5,
+                    0,
+                    -5
+                ],
+                "size": [
+                    10,
+                    10,
+                    10
+                ]
+            },
+            "minecraft:placement_filter": {
+                "conditions": [
+                    {
+                        "allowed_faces": [
+                            "up"
+                        ],
+                        "block_filter": [
+                            "betternether:mushroom_grass",
+                            "betternether:sepian_mushroom_grass"
+                        ]
+                    }
+                ]
+            },
+            "minecraft:random_offset": {
+                "x": {
+                    "range": {
+                        "min": -1,
+                        "max": 1
+                    },
+                    "steps": 0
+                },
+                "y": {
+                    "range": {
+                        "min": -1,
+                        "max": 1
+                    },
+                    "steps": 0
+                },
+                "z": {
+                    "range": {
+                        "min": -1,
+                        "max": 1
+                    },
+                    "steps": 0
+                }
+            }
+        }
+    }
+}
