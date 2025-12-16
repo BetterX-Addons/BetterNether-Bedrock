@@ -1,6 +1,7 @@
-import { Block, Direction, EntityEquippableComponent, ItemStack, Vector3, world } from "@minecraft/server";
+import { Block, Direction, Entity, EntityEquippableComponent, ItemStack, Vector3, world } from "@minecraft/server";
 import { Vec3 } from "./vec/index";
 import { ItemUtils } from "./ItemUtils";
+import { EntityUtils } from "./EntityUtils";
 
 export class BlockUtils {
     static randomState(block: Block, state: string, maxStates: number) {
@@ -74,6 +75,11 @@ export class BlockUtils {
             const hasFluids = BlockUtils.getFluids(downBlock, "minecraft:lava");
             if (!hasFluids) BlockUtils.destroyBlock(block);
         }
+    }
+
+    static slimeBlock(block: Block, entity: Entity) {
+        const velY = Math.abs((EntityUtils.getVelocity(entity) as Vector3)?.y);
+        entity.applyImpulse({ x: 0, y: velY, z: 0 })
     }
 
     static destroyBlock(block: Block) {

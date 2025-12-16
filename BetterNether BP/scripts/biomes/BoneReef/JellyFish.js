@@ -4,6 +4,14 @@ import { ItemUtils } from "../../utils/ItemUtils";
 import { Vec3 } from "../../utils/vec/index";
 system.beforeEvents.startup.subscribe(e => {
     e.blockComponentRegistry.registerCustomComponent("betternether:jellyfish", {
+        onEntityFallOn({ block, entity }) {
+            if (!entity)
+                return;
+            const growth = block.permutation.getState('betternether:growth');
+            if (growth < 3)
+                return;
+            BlockUtils.slimeBlock(block, entity);
+        },
         onTick({ block, dimension }) {
             const growth = block.permutation.getState('betternether:growth');
             if (growth == 2) {

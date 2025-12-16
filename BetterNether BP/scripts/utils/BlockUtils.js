@@ -1,6 +1,7 @@
 import { Direction, world } from "@minecraft/server";
 import { Vec3 } from "./vec/index";
 import { ItemUtils } from "./ItemUtils";
+import { EntityUtils } from "./EntityUtils";
 export class BlockUtils {
     static randomState(block, state, maxStates) {
         const random = Math.floor(Math.random() * maxStates);
@@ -71,6 +72,10 @@ export class BlockUtils {
             if (!hasFluids)
                 BlockUtils.destroyBlock(block);
         }
+    }
+    static slimeBlock(block, entity) {
+        const velY = Math.abs(EntityUtils.getVelocity(entity)?.y);
+        entity.applyImpulse({ x: 0, y: velY, z: 0 });
     }
     static destroyBlock(block) {
         const { x, y, z } = block.location;
