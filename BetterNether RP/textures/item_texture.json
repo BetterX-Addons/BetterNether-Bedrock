@@ -2,6 +2,9 @@
     "resource_pack_name": "BetterNether RP",
     "texture_data": {
         // Bone Reef
+        "jellyfish_mushroom_sapling": {
+            "textures": "textures/items/bonereef/jellyfish_mushroom_sapling"
+        },
         "feather_fern": {
             "textures": "textures/items/bonereef/feather_fern"
         },

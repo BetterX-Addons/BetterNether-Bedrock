@@ -1,0 +1,83 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.lumabus_roots",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [0, 0.75, 0]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [8, 0, -8],
+					"cubes": [
+						{
+							"origin": [5.499, 0, -5.5],
+							"size": [0.001, 16, 16],
+							"pivot": [5.5, 0, -5.5],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"east": {"uv": [16, 0], "uv_size": [-16, 16], "material_instance": "lumabus_vine"},
+								"west": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "lumabus_vine"}
+							}
+						},
+						{
+							"origin": [-5.501, 0, -5.5],
+							"size": [0.001, 16, 16],
+							"pivot": [-5.5, 0, -5.5],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "lumabus_vine"},
+								"west": {"uv": [16, 0], "uv_size": [-16, 16], "material_instance": "lumabus_vine"}
+							}
+						},
+						{
+							"origin": [2.999, 1.5, -8],
+							"size": [0.001, 16, 16],
+							"pivot": [3, 1.5, -8],
+							"rotation": [0, 0, -22.5],
+							"uv": {
+								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "lumabus_roots"},
+								"west": {"uv": [16, 0], "uv_size": [-16, 16], "material_instance": "lumabus_roots"}
+							}
+						},
+						{
+							"origin": [-3.001, 1.5, -8],
+							"size": [0.001, 16, 16],
+							"pivot": [-3, 1.5, -8],
+							"rotation": [0, 0, 22.5],
+							"uv": {
+								"east": {"uv": [16, 0], "uv_size": [-16, 16], "material_instance": "lumabus_roots"},
+								"west": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "lumabus_roots"}
+							}
+						},
+						{
+							"origin": [-8, 1.5, -3],
+							"size": [16, 16, 0.001],
+							"pivot": [8, 1.5, -3],
+							"rotation": [-22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "lumabus_roots"},
+								"south": {"uv": [16, 0], "uv_size": [-16, 16], "material_instance": "lumabus_roots"}
+							}
+						},
+						{
+							"origin": [-8, 1.5, 3],
+							"size": [16, 16, 0.001],
+							"pivot": [8, 1.5, 3],
+							"rotation": [22.5, 0, 0],
+							"uv": {
+								"north": {"uv": [16, 0], "uv_size": [-16, 16], "material_instance": "lumabus_roots"},
+								"south": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "lumabus_roots"}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
