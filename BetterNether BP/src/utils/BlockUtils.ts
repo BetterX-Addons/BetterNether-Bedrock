@@ -24,20 +24,20 @@ export class BlockUtils {
     static growPlantDirection(block: Block, direction: "Up" | "Down" | Direction) {
         if (direction === Direction.Up) {
             let topBlock = block.dimension.getBlock(Vec3.add(block.location, { x: 0, y: 1, z: 0 }));
-            while (topBlock.typeId !== "minecraft:air") {
+            while (topBlock?.typeId !== "minecraft:air") {
                 topBlock = block.dimension.getBlock(Vec3.add(topBlock.location, { x: 0, y: 1, z: 0 }));
             }
-            if (topBlock.typeId === "minecraft:air") {
+            if (topBlock?.typeId === "minecraft:air") {
                 topBlock.dimension.setBlockType(topBlock.location, block.typeId);
                 BlockUtils.spawnParticles(topBlock, "minecraft:crop_growth_emitter");
             }
         }
         else {
             let bottomBlock = block.dimension.getBlock(Vec3.add(block.location, { x: 0, y: -1, z: 0 }));
-            while (bottomBlock.typeId !== "minecraft:air") {
+            while (bottomBlock?.typeId !== "minecraft:air") {
                 bottomBlock = block.dimension.getBlock(Vec3.add(bottomBlock.location, { x: 0, y: -1, z: 0 }));
             }
-            if (bottomBlock.typeId === "minecraft:air") {
+            if (bottomBlock?.typeId === "minecraft:air") {
                 bottomBlock.dimension.setBlockType(bottomBlock.location, block.typeId);
                 BlockUtils.spawnParticles(bottomBlock, "minecraft:crop_growth_emitter");
             }
