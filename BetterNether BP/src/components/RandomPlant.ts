@@ -17,6 +17,7 @@ export const randomPlantComponent: BlockCustomComponent = {
         if (item?.typeId === boneMeal) {
             dimension.spawnItem(new ItemStack(block.typeId), getFixedLocation(block));
             item.amount -= 1;
+            equipment?.setEquipment(EquipmentSlot.Mainhand, item);
             dimension.spawnParticle(growthParticle, particleLocation(block));
         }
     }

@@ -26,6 +26,7 @@ export const seedPlantComponent: BlockCustomComponent = {
         if (item?.typeId === boneMeal && growth < max) {
             setSize(block, growth, fixedLocation);
             item.amount -= 1;
+            equipment?.setEquipment(EquipmentSlot.Mainhand, item);
         }
     }
 };
