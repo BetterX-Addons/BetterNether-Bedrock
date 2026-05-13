@@ -1,3 +1,28 @@
 {
-    
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "betternether:hydrogen_jellyfish",
+            "materials": {
+                "default": "skeleton"
+            },
+            "textures": {
+                "default": "textures/entity/betternether/hydrogen_jellyfish"
+            },
+            "geometry": {
+                "default": "geometry.hydrogen_jellyfish"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ],
+            "animations": {
+                "idle": "animation.hydrogen_jellyfish.fly"
+            },
+            "scripts": {
+                "animate": [
+                    "idle"
+                ]
+            }
+        }
+    }   
 }
