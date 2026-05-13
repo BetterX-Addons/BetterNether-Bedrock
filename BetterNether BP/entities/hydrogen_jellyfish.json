@@ -5,18 +5,21 @@
       "identifier": "betternether:hydrogen_jellyfish",
       "spawn_category": "creature",
       "is_spawnable": true,
-      "is_summonable": true
+      "is_summonable": true,
+      "runtime_identifier": "minecraft:blaze"
     },
     "component_groups": {
       "betternether:explode": {
         "minecraft:explode": {
-          "power": 5,
+          "fuse_lit": true,
+          "power": 6,
           "causes_fire": false,
-          "breaks_blocks": false
+          "breaks_blocks": true
         }
       }
     },
     "components": {
+      "minecraft:physics": {},
       "minecraft:health": {
         "value": 1,
         "max": 1
@@ -30,15 +33,6 @@
       "minecraft:collision_box": {
         "width": 1.7,
         "height": 5.9
-      },
-      "minecraft:physics": {
-        "has_gravity": true
-      },
-      "minecraft:can_fly": {},
-      "minecraft:jump.static": {},
-      "minecraft:follow_range": {
-        "value": 16,
-        "max": 16
       },
       "minecraft:hurt_on_condition": {
         "damage_conditions": [
@@ -65,7 +59,8 @@
                 "value": "fatal"
               },
               "event": "betternether:explode"
-            }
+            },
+            "deals_damage": "no"
           }
         ]
       },
@@ -75,19 +70,21 @@
       "minecraft:despawn": {
         "despawn_from_distance": {}
       },
-      "minecraft:behavior.float": {
-        "priority": 0
-      },
       "minecraft:body_rotation_always_follows_head": {},
       // fly
-      "minecraft:movement": {
-          "value": 0.016
-        },
+      "minecraft:can_fly": {},
+      "minecraft:behavior.random_fly": {
+        "avoid_damage_blocks": true,
+        "can_land_on_trees": true,
+        "xz_dist": 10,
+        "y_dist": 7,
+        "y_offset": 0
+      },
+      "minecraft:movement.fly": {},
+      "minecraft:behavior.float": {},
+      "minecraft:navigation.fly": {},
         "minecraft:flying_speed": {
-          "value": 0.016
-        },
-        "minecraft:knockback_resistance": {
-          "value": 0.0
+          "value": 0.1
         },
         "minecraft:behavior.float_wander": {
           "priority": 7,

@@ -5,11 +5,10 @@ const growthParticle = 'minecraft:crop_growth_emitter';
 
 export const randomPlantComponent: BlockCustomComponent = {
     beforeOnPlayerPlace(e, { params }) {
-        const { block } = e;
         const permutation = e.permutationToPlace;
         const p = params as { max_states: number };
         const maxStates = p.max_states;
-        const randomVariant = getRandomVariant(block, maxStates);
+        const randomVariant = getRandomVariant(maxStates);
         const newPermutation = permutation.withState('betternether:random', randomVariant);
         e.permutationToPlace = newPermutation;
     },
@@ -26,7 +25,7 @@ export const randomPlantComponent: BlockCustomComponent = {
     }
 };
 
-function getRandomVariant(block: Block, maxStates: number): number {
+function getRandomVariant(maxStates: number): number {
     // Implement logic to get a random variant within the allowed range (0, maxStates)
     return Math.floor(Math.random() * maxStates);
 }

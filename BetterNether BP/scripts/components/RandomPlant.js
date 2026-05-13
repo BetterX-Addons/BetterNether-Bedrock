@@ -3,11 +3,10 @@ const boneMeal = 'minecraft:bone_meal';
 const growthParticle = 'minecraft:crop_growth_emitter';
 export const randomPlantComponent = {
     beforeOnPlayerPlace(e, { params }) {
-        const { block } = e;
         const permutation = e.permutationToPlace;
         const p = params;
         const maxStates = p.max_states;
-        const randomVariant = getRandomVariant(block, maxStates);
+        const randomVariant = getRandomVariant(maxStates);
         const newPermutation = permutation.withState('betternether:random', randomVariant);
         e.permutationToPlace = newPermutation;
     },
@@ -23,7 +22,7 @@ export const randomPlantComponent = {
         }
     }
 };
-function getRandomVariant(block, maxStates) {
+function getRandomVariant(maxStates) {
     // Implement logic to get a random variant within the allowed range (0, maxStates)
     return Math.floor(Math.random() * maxStates);
 }

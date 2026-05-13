@@ -12,6 +12,12 @@ export const grassBlockComponent = {
             dimension.placeFeature(feature, block.location);
             item.amount -= 1;
             equipment?.setEquipment(EquipmentSlot.Mainhand, item);
+            // spawn particles in random positions and in the center of the block
+            for (let i = 0; i < 10; i++) {
+                const offsetX = (Math.random() - 0.5) * 0.5;
+                const offsetZ = (Math.random() - 0.5) * 0.5;
+                dimension.spawnParticle(growthParticle, { x: fixedLocation.x + offsetX, y: fixedLocation.y + 0.5, z: fixedLocation.z + offsetZ });
+            }
             dimension.spawnParticle(growthParticle, fixedLocation);
         }
     }
