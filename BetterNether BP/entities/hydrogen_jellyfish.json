@@ -9,6 +9,21 @@
       "runtime_identifier": "minecraft:blaze"
     },
     "component_groups": {
+      "betternether:big": {
+        "minecraft:scale": {
+          "value": 1
+        }
+      },
+      "betternether:medium": {
+        "minecraft:scale": {
+          "value": 0.9
+        }
+      },
+      "betternether:small": {
+        "minecraft:scale": {
+          "value": 0.8
+        }
+      },
       "betternether:explode": {
         "minecraft:explode": {
           "fuse_lit": true,
@@ -19,7 +34,10 @@
       }
     },
     "components": {
-      "minecraft:physics": {},
+      "minecraft:physics": {
+        "has_collision": true,
+        "has_gravity": false
+      },
       "minecraft:health": {
         "value": 1,
         "max": 1
@@ -73,36 +91,63 @@
       "minecraft:body_rotation_always_follows_head": {},
       // fly
       "minecraft:can_fly": {},
-      "minecraft:behavior.random_fly": {
-        "avoid_damage_blocks": true,
-        "can_land_on_trees": true,
-        "xz_dist": 10,
-        "y_dist": 7,
-        "y_offset": 0
-      },
-      "minecraft:movement.fly": {},
+      "minecraft:behavior.random_fly": {},
       "minecraft:behavior.float": {},
-      "minecraft:navigation.fly": {},
-        "minecraft:flying_speed": {
-          "value": 0.1
-        },
-        "minecraft:behavior.float_wander": {
-          "priority": 7,
-          "must_reach": true,
-          "random_reselect": true,
-          "navigate_around_surface": true,
-          "additional_collision_buffer": true,
-          "allow_navigating_through_liquids": false,
-          "use_home_position_restriction": true,
-          "surface_xz_dist": 16,
-          "surface_y_dist": 16,
-          "float_duration": [
-            2.0,
-            7.0
-          ]
-        }
+      "minecraft:movement": {
+        "value": 0.02
+      },
+      "minecraft:flying_speed": {
+        "value": 0.05
+      },
+      "minecraft:movement.hover": {},
+      "minecraft:navigation.hover": {
+        "can_path_over_water": true,
+        "avoid_damage_blocks": true,
+        "can_path_from_air": true,
+        "avoid_water": true
+      },
+      "minecraft:behavior.random_hover": {
+				"priority": 12,
+				"xz_dist": 8,
+				"y_dist": 8,
+				"y_offset": -1,
+				"interval": 1,
+				"hover_height": [
+					1,
+					10
+				]
+			},
+      "minecraft:behavior.float_wander": {}
     },
     "events": {
+      "minecraft:entity_spawned": {
+        "randomize": [
+          {
+            "weight": 1,
+            "add": {
+              "component_groups": [
+                "betternether:big"
+              ]
+            }
+          },
+          {
+            "weight": 2,
+            "add": {
+              "component_groups": [
+                "betternether:medium"
+              ]
+            }
+          },
+          {
+            "weight": 3,
+            "add": {
+              "component_groups": [
+                "betternether:small"
+              ]
+            }
+          }
+        ]
+      },
       "betternether:explode": {
         "add": {
           "component_groups": [
