@@ -4,7 +4,7 @@
         "description": {
             "identifier": "betternether:hydrogen_jellyfish",
             "materials": {
-                "default": "skeleton"
+                "default": "entity_alphatest"
             },
             "textures": {
                 "default": "textures/entity/betternether/hydrogen_jellyfish"
