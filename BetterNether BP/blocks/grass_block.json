@@ -1,0 +1,14 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "betternether:grass_block"
+        },
+        "permutations": [], // tus permutations aquí
+        "components": {
+            "betternether:bone_meal_vegetation": {
+                "feature": "example_feature" // tu feature aquí
+            }
+        }
+    }
+}

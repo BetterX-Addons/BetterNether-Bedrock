@@ -2,11 +2,14 @@ import { EquipmentSlot, ItemStack } from "@minecraft/server";
 const boneMeal = 'minecraft:bone_meal';
 const growthParticle = 'minecraft:crop_growth_emitter';
 export const randomPlantComponent = {
-    onPlace({ block }, { params }) {
+    beforeOnPlayerPlace(e, { params }) {
+        const { block } = e;
+        const permutation = e.permutationToPlace;
         const p = params;
         const maxStates = p.max_states;
-        const permutation = block.permutation;
-        setVariant(block, getRandomVariant(block, maxStates));
+        const randomVariant = getRandomVariant(block, maxStates);
+        const newPermutation = permutation.withState('betternether:random', randomVariant);
+        e.permutationToPlace = newPermutation;
     },
     onPlayerInteract({ block, player, dimension }, { params }) {
         const p = params;
@@ -15,6 +18,7 @@ export const randomPlantComponent = {
         if (item?.typeId === boneMeal) {
             dimension.spawnItem(new ItemStack(block.typeId), getFixedLocation(block));
             item.amount -= 1;
+            equipment?.setEquipment(EquipmentSlot.Mainhand, item);
             dimension.spawnParticle(growthParticle, particleLocation(block));
         }
     }
@@ -22,11 +26,6 @@ export const randomPlantComponent = {
 function getRandomVariant(block, maxStates) {
     // Implement logic to get a random variant within the allowed range (0, maxStates)
     return Math.floor(Math.random() * maxStates);
-}
-function setVariant(block, random) {
-    const permutation = block.permutation;
-    const newVariant = permutation.withState("betternether:random", random);
-    block.setPermutation(newVariant);
 }
 function getFixedLocation(block) {
     const loc = block.location;

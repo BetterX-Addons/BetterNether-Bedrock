@@ -4,11 +4,14 @@ const boneMeal = 'minecraft:bone_meal';
 const growthParticle = 'minecraft:crop_growth_emitter';
 
 export const randomPlantComponent: BlockCustomComponent = {
-    onPlace({ block }, { params }) {
+    beforeOnPlayerPlace(e, { params }) {
+        const { block } = e;
+        const permutation = e.permutationToPlace;
         const p = params as { max_states: number };
         const maxStates = p.max_states;
-        const permutation = block.permutation;
-        setVariant(block, getRandomVariant(block, maxStates));
+        const randomVariant = getRandomVariant(block, maxStates);
+        const newPermutation = permutation.withState('betternether:random', randomVariant);
+        e.permutationToPlace = newPermutation;
     },
     onPlayerInteract({ block, player, dimension }, { params }) {
         const p = params as { max_states: number };
@@ -26,12 +29,6 @@ export const randomPlantComponent: BlockCustomComponent = {
 function getRandomVariant(block: Block, maxStates: number): number {
     // Implement logic to get a random variant within the allowed range (0, maxStates)
     return Math.floor(Math.random() * maxStates);
-}
-
-function setVariant(block: Block, random: number) {
-    const permutation = block.permutation;
-    const newVariant = permutation.withState("betternether:random", random);
-    block.setPermutation(newVariant);
 }
 
 function getFixedLocation(block: Block): Vector3 {
