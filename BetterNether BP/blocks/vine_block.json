@@ -5,15 +5,15 @@
             "identifier": "betternether:vine_block",
             "states": {
                 "betternether:vine": [
-                    true,
-                    false
+                    0, 1, 2
                 ]
             }
         },
         "permutations": [], // tus permutations aquí
         "components": {
             "betternether:vine": {
-                "grow_direction": "up" // tu direccion aquí (up o down)
+                "grow_direction": "up", // tu direccion aquí (up o down)
+                "has_roots": true // si la planta tiene raíces o no
             }
         }
     }

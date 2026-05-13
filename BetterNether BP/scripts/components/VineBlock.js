@@ -1,12 +1,19 @@
 import { EquipmentSlot } from "@minecraft/server";
 const boneMeal = 'minecraft:bone_meal';
 const growthParticle = 'minecraft:crop_growth_emitter';
+/*
+# Vine without roots (betternether:vine) -> State with 2 values: 0 = bottom vine, 1 = middle vine
+# Vine with roots (betternether:vine) -> State with 3 values: 0 = bottom vine, 1 = middle vine, 2 = top vine
+
+- Vines with roots, if they grow, the new vine will be the top vine, the current vine will be the middle vine and if there is a vine below, it will become the bottom vine
+- Vines without roots, if they grow, the new vine will be the middle vine and the current vine will be the bottom vine, if there is a vine below, it will remain unchanged
+*/
 export const vineComponent = {
     onRandomTick({ block, dimension }, { params }) {
         const p = params;
         const direction = p.growing_direction === "up" ? "Up" : "Down";
         const permutation = block.permutation;
-        const vineState = permutation.getState("betternether:vine"); // always true
+        const vineState = permutation.getState("betternether:vine"); // 0, 1, or 2
         const isBlock = getBlockWithOffset(block, direction);
         if (!isBlock) {
             if (Math.random() < 0.1)
@@ -14,11 +21,11 @@ export const vineComponent = {
             // Si no hay bloque en la dirección de crecimiento, crece, si lo hay, no hace nada
             // La parte que crece, se le añade el permutation betternether:vine en true que seria el top vine
             // La parte anterior, se le añade el permutation betternether:vine en false que seria el bottom vine
-            const newPermutation = permutation.withState("betternether:vine", true);
+            const newPermutation = permutation.withState("betternether:vine", vineState + 1);
             block.setPermutation(newPermutation);
             const offsetBlock = getBlockWithOffset(block, direction === "Up" ? "Down" : "Up");
             if (offsetBlock) {
-                const offsetPermutation = offsetBlock.permutation.withState("betternether:vine", false);
+                const offsetPermutation = offsetBlock.permutation.withState("betternether:vine", vineState);
                 offsetBlock.setPermutation(offsetPermutation);
             }
             dimension.spawnParticle(growthParticle, particleLocation(block));
@@ -32,11 +39,11 @@ export const vineComponent = {
         const vineState = block.permutation.getState("betternether:vine");
         const isBlock = getBlockWithOffset(block, direction);
         if (item?.typeId === boneMeal && !isBlock) {
-            const newPermutation = block.permutation.withState("betternether:vine", true);
+            const newPermutation = block.permutation.withState("betternether:vine", vineState + 1);
             block.setPermutation(newPermutation);
             const offsetBlock = getBlockWithOffset(block, direction === "Up" ? "Down" : "Up");
             if (offsetBlock) {
-                const offsetPermutation = offsetBlock.permutation.withState("betternether:vine", false);
+                const offsetPermutation = offsetBlock.permutation.withState("betternether:vine", vineState);
                 offsetBlock.setPermutation(offsetPermutation);
             }
             item.amount -= 1;
