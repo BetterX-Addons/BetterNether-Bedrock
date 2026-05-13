@@ -1,0 +1,17 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "betternether:random_state_example",
+            "states": {
+                "betternether:random": [ 0, 1, 2, 3 ] // 3 es el maximo state
+            }
+        },
+        "permutations": [], // tus permutations aquí
+        "components": {
+            "betternether:random": {
+                "max_states": 3
+            }
+        }
+    }
+}

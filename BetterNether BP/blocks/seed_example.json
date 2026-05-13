@@ -1,0 +1,17 @@
+{
+    "format_version": "1.26.0",
+    "minecraft:block": {
+        "description": {
+            "identifier": "betternether:seed_example",
+            "states": {
+                "betternether:growth": [ 0, 1, 2, 3 ] // 3 es el maximo state
+            }
+        },
+        "permutations": [], // tus permutations aquí
+        "components": {
+            "betternether:growth": {
+                "max_size": 3
+            }
+        }
+    }
+}
