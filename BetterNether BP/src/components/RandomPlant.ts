@@ -1,6 +1,7 @@
 import { Block, BlockCustomComponent, EquipmentSlot, ItemStack, Vector3 } from "@minecraft/server";
 
 const boneMeal = 'minecraft:bone_meal';
+const growthParticle = 'minecraft:crop_growth_emitter';
 
 export const randomPlantComponent: BlockCustomComponent = {
     onPlace({ block }, { params }) {
@@ -16,6 +17,7 @@ export const randomPlantComponent: BlockCustomComponent = {
         if (item?.typeId === boneMeal) {
             dimension.spawnItem(new ItemStack(block.typeId), getFixedLocation(block));
             item.amount -= 1;
+            dimension.spawnParticle(growthParticle, particleLocation(block));
         }
     }
 };
@@ -31,7 +33,12 @@ function setVariant(block: Block, random: number) {
     block.setPermutation(newVariant);
 }
 
-function getFixedLocation(block: Block) {
+function getFixedLocation(block: Block): Vector3 {
     const loc = block.location;
     return { x: loc.x + 0.5, y: loc.y + 1, z: loc.z + 0.5 };
+}
+
+function particleLocation(block: Block): Vector3 {
+    const loc = block.location;
+    return { x: loc.x + 0.5, y: loc.y, z: loc.z + 0.5 };
 }
