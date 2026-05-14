@@ -1,4 +1,4 @@
-import { system, world } from "@minecraft/server";
+import { EquipmentSlot, system, world } from "@minecraft/server";
 
 // ==========================================
 // CONSTANTS
