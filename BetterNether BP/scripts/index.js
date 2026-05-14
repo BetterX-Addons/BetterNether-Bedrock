@@ -1,5 +1,8 @@
 import { system } from "@minecraft/server";
 // ==========================================
+// CONSTANTS
+// ==========================================
+// ==========================================
 // COMPONENTS
 // ==========================================
 import { seedPlantComponent } from "components/SeedPlant";

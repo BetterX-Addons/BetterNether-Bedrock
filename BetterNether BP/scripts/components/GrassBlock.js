@@ -24,8 +24,8 @@ world.beforeEvents.playerInteractWithBlock.subscribe((event) => {
             item.amount -= 1;
             equipment?.setEquipment(EquipmentSlot.Mainhand, item);
             for (let i = 0; i < 5; i++) {
-                const offsetX = (Math.random() - 0.5) * 0.5;
-                const offsetZ = (Math.random() - 0.5) * 0.5;
+                const offsetX = (Math.random() - 0.5) * 2;
+                const offsetZ = (Math.random() - 0.5) * 2;
                 dimension.spawnParticle(growthParticle, { x: fixedLocation.x + offsetX, y: fixedLocation.y + 0.5, z: fixedLocation.z + offsetZ });
             }
             dimension.spawnParticle(growthParticle, fixedLocation);

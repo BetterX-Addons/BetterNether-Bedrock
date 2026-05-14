@@ -3,7 +3,7 @@ import { EquipmentSlot, system, world } from "@minecraft/server";
 // ==========================================
 // CONSTANTS
 // ==========================================
-import { GRASS_BLOCKS } from "constants/GrassBlocks";
+
 
 // ==========================================
 // COMPONENTS
