@@ -22,6 +22,11 @@ world.beforeEvents.playerInteractWithBlock.subscribe((event) => {
             dimension.placeFeature(feature, block.location);
             item.amount -= 1;
             equipment?.setEquipment(EquipmentSlot.Mainhand, item);
+            for (let i = 0; i < 5; i++) {
+                const offsetX = (Math.random() - 0.5) * 2; // hay que hacer que el rango sea de -2 a 2 bloques
+                const offsetZ = (Math.random() - 0.5) * 2;
+                dimension.spawnParticle(growthParticle, { x: fixedLocation.x + offsetX, y: fixedLocation.y, z: fixedLocation.z + offsetZ });
+            }
             dimension.spawnParticle(growthParticle, fixedLocation);
         });
     }
