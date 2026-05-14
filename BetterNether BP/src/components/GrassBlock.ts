@@ -16,9 +16,9 @@ export const grassBlockComponent: BlockCustomComponent = {
             equipment?.setEquipment(EquipmentSlot.Mainhand, item);
             // spawn particles in random positions and in the center of the block
             for (let i = 0; i < 5; i++) {
-                const offsetX = (Math.random() - 0.5) * 0.5;
-                const offsetZ = (Math.random() - 0.5) * 0.5;
-                dimension.spawnParticle(growthParticle, { x: fixedLocation.x + offsetX, y: fixedLocation.y + 0.5, z: fixedLocation.z + offsetZ });
+                const offsetX = (Math.random() - 0.5) * 2; // hay que hacer que el rango sea de -2 a 2 bloques
+                const offsetZ = (Math.random() - 0.5) * 2;
+                dimension.spawnParticle(growthParticle, { x: fixedLocation.x + offsetX, y: fixedLocation.y, z: fixedLocation.z + offsetZ });
             }
             dimension.spawnParticle(growthParticle, fixedLocation);
         }
